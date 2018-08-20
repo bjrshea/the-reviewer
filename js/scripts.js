@@ -1,10 +1,12 @@
 // BACKEND
 
-function Review(name, location, date, meal) {
+function Review(name, location, date, meal, rating, review) {
   this.name = name;
   this.location = location;
   this.date = date;
   this.meal = meal;
+  this.rating = rating;
+  this.review = review;
 }
 
 function resetFields() {
@@ -12,6 +14,8 @@ function resetFields() {
   $("#location").val("");
   $("#date").val("");
   $("#meal").val("");
+  $("#rating").val("");
+  $("#review").val("");
 }
 
 // FRONT END
@@ -24,8 +28,10 @@ $(document).ready(function(){
     var inputtedLocation = $("input#location").val();
     var inputtedDate = $("input#date").val();
     var inputtedMeal = $("input#meal").val();
+    var inputtedRating = $("input#rating").val();
+    var inputtedReview = $("textarea#review").val();
 
-    var newReview = new Review(inputtedName, inputtedLocation, inputtedDate, inputtedMeal);
+    var newReview = new Review(inputtedName, inputtedLocation, inputtedDate, inputtedMeal, inputtedRating, inputtedReview);
 
     $("ul#restaurant-names").append("<li><span class='restaurant-names'>" + newReview.name + "</span></li>");
 
@@ -35,6 +41,8 @@ $(document).ready(function(){
     $(".location").text(newReview.location);
     $(".date").text(newReview.date);
     $(".meal").text(newReview.meal);
+    $(".rating").text(newReview.rating);
+    $(".review").text(newReview.review);
   });
 
     resetFields();

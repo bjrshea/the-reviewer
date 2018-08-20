@@ -1,3 +1,7 @@
 #show-restaurant-reviews {
   display: none;
 }
+
+#review {
+  height: 200px;
+}
