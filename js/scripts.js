@@ -1,12 +1,12 @@
 // BACKEND
 
-function Review(name, location, date, meal, rating, review) {
+function Review(name, location, date, meal, rating, comment) {
   this.name = name;
   this.location = location;
   this.date = date;
   this.meal = meal;
   this.rating = rating;
-  this.review = review;
+  this.comment = comment;
 }
 
 function resetFields() {
@@ -15,7 +15,7 @@ function resetFields() {
   $("#date").val("");
   $("#meal").val("");
   $("#rating").val("");
-  $("#review").val('');
+  $("#comment").val("");
 }
 
 // FRONT END
@@ -29,10 +29,10 @@ $(document).ready(function(){
     var inputtedDate = $("input#date").val();
     var inputtedMeal = $("select#meal").val();
     console.log(inputtedMeal);
+    var inputtedComment = $("textarea#comment").val();
     var inputtedRating = $("input#rating").val();
-    var inputtedReview = $("textarea#review").val();
 
-    var newReview = new Review(inputtedName, inputtedLocation, inputtedDate, inputtedMeal, inputtedRating, inputtedReview);
+    var newReview = new Review(inputtedName, inputtedLocation, inputtedDate, inputtedMeal, inputtedRating, inputtedComment);
 
     $("ul#restaurant-names").append("<li><span class='restaurant-names'>" + newReview.name + "</span></li>");
 
@@ -43,9 +43,10 @@ $(document).ready(function(){
     $(".date").text(newReview.date);
     $(".meal").text(newReview.meal);
     $(".rating").text(newReview.rating);
-    $(".review").text(newReview.review);
+    $(".comment").text(newReview.comment);
   });
 
     resetFields();
+
   });
 });
