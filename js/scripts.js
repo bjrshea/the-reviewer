@@ -34,9 +34,9 @@ $(document).ready(function(){
 
     var newReview = new Review(inputtedName, inputtedLocation, inputtedDate, inputtedMeal, inputtedRating, inputtedComment);
 
-    $("ul#restaurant-names").append("<li><span class='restaurant-names'>" + newReview.name + "</span></li>");
+    $("ul#restaurant-names").append("<li><span class='restaurant-name'>" + newReview.name + "</span></li>");
 
-  $("#restaurant-names").last().click(function() {
+  $(".restaurant-name").last().click(function() {
     $("#show-restaurant-reviews").show();
     $("#show-restaurant-reviews h2").text(newReview.name);
     $(".location").text(newReview.location);
