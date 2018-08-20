@@ -15,7 +15,7 @@ function resetFields() {
   $("#date").val("");
   $("#meal").val("");
   $("#rating").val("");
-  $("#review").val("");
+  $("#review").val('');
 }
 
 // FRONT END
@@ -27,7 +27,8 @@ $(document).ready(function(){
     var inputtedName = $("input#name").val();
     var inputtedLocation = $("input#location").val();
     var inputtedDate = $("input#date").val();
-    var inputtedMeal = $("input#meal").val();
+    var inputtedMeal = $("select#meal").val();
+    console.log(inputtedMeal);
     var inputtedRating = $("input#rating").val();
     var inputtedReview = $("textarea#review").val();
 

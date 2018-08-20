@@ -1,7 +1,47 @@
+button {
+  margin-top: 25px;
+}
+
 #show-restaurant-reviews {
   display: none;
 }
 
 #review {
   height: 200px;
+}
+
+#stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  color: gold;
+}
+#stars > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  color: gold;
+}
+#stars > span:hover:before,
+#stars > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color: gold;
+}
+
+
+#row1{
+  height: 700px;
+}
+
+.container {
+  background-color: yellow;
+}
+
+form {
+  background-color: orange;
+  height: 800px;
+}
+
+#show-restaurant-reviews{
+  background-color: red;
 }
